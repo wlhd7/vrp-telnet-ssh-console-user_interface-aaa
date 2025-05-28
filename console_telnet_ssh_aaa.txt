@@ -1,0 +1,18 @@
+[R]user-interface vty 0 4
+[R-ui-vty0-4]authentication-mode aaa
+[R-ui-vty0-4]protocol inbound all
+
+[R]aaa
+[R-aaa]local-user wlhd password cipher wlhd
+[R-aaa]local-user wlhd service-type terminal telnet ssh
+[R-aaa]local-user wlhd privilege level 15
+
+[R]stelnet server enable
+[R]telnet server enable 
+
+[R]rsa local-key-pair create 
+
+[R]ssh user wlhd authentication-type password
+
+[R1]ssh client first-time enable
+[R1]stelnet %ip address%
