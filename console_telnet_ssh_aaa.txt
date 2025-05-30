@@ -1,4 +1,5 @@
 [R]user-interface vty 0 4
+[R-ui-vty0-4]shell    //enable by default
 [R-ui-vty0-4]authentication-mode aaa
 [R-ui-vty0-4]protocol inbound all
 
